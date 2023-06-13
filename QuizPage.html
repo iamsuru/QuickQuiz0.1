@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Select Category</title>
+        <link rel="icon" href="icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Work+Sans:300,600">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="category">
+            <h1>Select Your Favorite Choice </h1> <br>
+            <button class="btn" id="geographyFun" onclick="hideAndShow()" style="height: 70px; width: 400px; background-color:#e90e0e">Geography & Places Quizzes</button>
+            <button class="btn" id="GK" onclick="hideAndShow()" style="height: 70px; width: 400px; background-color:#9DDD16">General Knowledge Quizzes</button><br>
+            <button class="btn" id="sports" onclick="hideAndShow()" style="height: 70px; width: 400px; background-color:#36DBA9">Sports Quizzes</button>
+            <button class="btn" id="history" onclick="hideAndShow()" style="height: 70px; width: 400px; background-color:#CF18B2">History Quizzes</button><br>
+            <button class="btn" id="music" onclick="hideAndShow()" style="height: 70px; width: 400px; background-color:#287B76">Music Quizzes</button>
+            <button class="btn" id="food" onclick="hideAndShow()" style="height: 70px; width: 400px; background-color:#13DFBA">Food & Drink Quizzes</button><br>
+            <button class="btn" id="science" onclick="hideAndShow()" style="height: 70px; width: 400px; background-color:#E0871E">Science & Nature Quizzes</button>
+            <button class="btn" id="wordPlay" onclick="hideAndShow()" style="height: 70px; width: 400px; background-color:#23C751">Word Play Quizzes</button><br>
+            <button class="btn" id="computer" onclick="hideAndShow()" style="height: 70px; width: 400px; background-color:#FFC46C">Computer Quizzes</button>
+            <button class="btn" id="potLuck" onclick="hideAndShow()" style="height: 70px; width: 400px; background-color:#6E9BF0">Pot Luck Quizzes</button>
+        </div>
+        <div class="info_box">
+            <div class="info-title"><span>Some Rules of this Quiz</span></div>
+            <div class="info-list">
+                <div class="info">1. You will have only <span>30 seconds</span>to answer question.</div>
+                <div class="info">2. Once you select your answer, it can't be undone.</div>
+                <div class="info">3. You can't select any option once time goes off.</div>
+                <div class="info">4. You'll get points on the basis of your correct answers.</div>
+            </div>
+            <div class="buttons">
+                <button class="quit">Exit Quiz</button>
+                <button class="restart">Continue</button>
+            </div>
+        </div>
+        <button id="logout">Logout</button>
+        <div class="grid" >
+            <div id="quiz">
+                <span id="timer"></span>
+                <p id="question"></p>
+                    <div class="buttons">
+                    <button id="btn0"><span id="choice0"></span></button>
+                    <button id="btn1"><span id="choice1"></span></button>
+                    <button id="btn2"><span id="choice2"></span></button>
+                    <button id="btn3"><span id="choice3"></span></button>
+                </div>
+                <hr style="margin-top: 50px">
+                <footer>
+                    <p id="progress"></p>
+                </footer>
+            </div>
+        </div>
+     <script type="module" src="question.js"></script>
+    </body>
+</html>
+<style>
+    body{
+        background-color: rgb(44, 42, 79);
+        text-align: center;
+        overflow: hidden;
+        
+    }
+
+    h1{
+        margin-top: 30px;
+        font-family: Regular 400;
+        font-size: 40px;
+        color: rgb(33, 214, 214);
+    }
+    a{
+        width: auto;
+        height: auto;
+        background-color: red;
+    }
+    .btn {
+        border: 2px solid black;
+        border-radius: 5px ;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .grid {
+        width: 600px;
+        height: 500px;
+        margin: 60px auto;
+        background: rgba(0,0,0,.5);
+        padding: 10px 50px 50px 50px;
+        border-radius: 10px;
+        
+    }
+    
+    #score {
+        color: #01BBFF;
+        text-align: center;
+        font-size: 30px;
+    }
+    #previous_score{
+        text-align: center;
+        color: #09d073;
+        font-size: 35px;
+        font-family: 'Square Peg', cursive;
+    }
+    #highest_score{
+        text-align: center;
+        color: #e30909;
+        font-size: 35px;
+        font-family: 'Beau Rivage', cursive;
+    }
+    .grid #question {
+        font-family: "monospace";
+        font-size: 30px;
+        color: aliceblue;
+    }
+    
+    .buttons {
+        margin-top: 30px;
+    }
+    
+    #btn0, #btn1, #btn2, #btn3 {
+        background-color: #3a90df;
+        width: 250px;
+        font-size: 20px;
+        color: #fff;
+        border: 1px solid #1D3C6A;
+        margin: 10px 40px 10px 0px;
+        padding: 10px 10px;
+        border-radius: 5px;
+    }
+    
+    #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+        cursor: pointer;
+        background-color: #0ea439;
+    }
+    
+    #btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+        outline: 0;
+    }
+    
+    #progress {
+        color: #c22853;
+        font-size: 18px;
+    }
+    #logout{
+        margin-left: 90%;
+        font-size: 17px;
+        font-weight: 400;
+        cursor: pointer;
+        width: 100px;
+        height:32px;
+        border: 2px ;
+        border-radius: 2px;
+        background-color: #3a90df;
+    }
+
+    .info_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .info_box.activeInfo{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.info_box{
+    width: 540px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.info_box .info-title{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.info_box .info-list{
+    padding: 15px 30px;
+}
+.info_box .info-list .info{
+    margin: 5px 0;
+    font-size: 17px;
+}
+.info_box .info-list .info span{
+    font-weight: 600;
+    color: #3a90df;
+}
+.info_box .buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid lightgrey;
+}
+.info_box .buttons button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #3a90df;
+    transition: all 0.3s ease;
+}
+
+.buttons button.restart{
+    color: #fff;
+    background: #3a90df;
+}
+.buttons button.restart:hover{
+    background: #0263ca;
+}
+.buttons button.quit{
+    color: #3a90df;
+    background: #fff;
+}
+.buttons button.quit:hover{
+    color: #fff;
+    background: #3a90df;
+}
+
+
+#timer{
+    width: 100px;
+    height: 30px;
+    background-color: #12c3d3;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+    #logout:hover{
+
+        background-color:  #012bc1;
+    }
+</style>
+
+<script>
+const info_box = document.querySelector(".info_box");
+function hideAndShow(){
+    info_box.classList.add("activeInfo");
+    var x = document.getElementById("category");
+    var y = document.getElementById("grid");
+    if (x.style.display === "none") {
+        x.style.display = "block"
+        y.style.display = "block"
+    }
+    else {
+        x.style.display = "none";
+    }
+}
+
+</script>

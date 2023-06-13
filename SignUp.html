@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="signupForm">
+        <div class="mainpanel">
+            <h3 style="color: #fff; font-family: 'Rubik Puddles', cursive; font-size: 30px;">Create QuickQuiz Account</h3>
+            <input type="text" id="name" placeholder="Enter Your Name" autocomplete="off">
+            <input type="email" id="email" placeholder="Enter Your Email" autocomplete="off">
+            <input type="text" id="username" placeholder="Create Username" autocomplete="off">
+            <input type="password" id="password" placeholder="Create Password" autocomplete="off">
+            <input type="password" id="confirm_password" placeholder="Confirm Password" >
+            <button id="create">
+                    Create an Account<i id="load" class="fa fa-spinner fa-spin"></i>
+            </button>
+          </div>
+      </div>
+      <script type="module" src="question.js"></script>
+</body>
+</html>
+
+<style>
+  body{
+    background-color: rgb(44, 42, 79);
+  }
+  .fa {
+        margin-right: -12px;
+        margin-left: 8px;
+    }
+  .mainpanel{
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: rgba(0,0,0,.5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+    }
+
+    #name{
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.377);
+        font-size: 24px;
+        color: #fff;
+        line-height: 32px;
+        width: 100%;
+        height: 55px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #email{
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.377);
+        font-size: 24px;
+        color: #fff;
+        line-height: 32px;
+        width: 100%;
+        height: 55px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #username{
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.377);
+        font-size: 24px;
+        color: #fff;
+        line-height: 32px;
+        width: 100%;
+        height: 55px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #password{
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.377);
+        font-size: 24px;
+        color: #fff;
+        line-height: 32px;
+        width: 100%;
+        height: 55px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #confirm_password{
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.377);
+        font-size: 24px;
+        color: #fff;
+        line-height: 32px;
+        width: 100%;
+        height: 55px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #create{
+      width: 100%;
+        height: 55px;
+        border: none;
+        border-radius: 5px;
+        font-size: 17px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #3a90df;
+        cursor: pointer
+    }
+
+    #create:hover{
+        height: 53px;
+        background-color: #1859c9db;
+    }
+</style>
